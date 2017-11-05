@@ -119,3 +119,6 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+## Using SendGrid to send emails.
+$wgSendGridAPIKey = getenv('SENDGRID_API_KEY');
+wfLoadExtension( 'SendGrid' );
