@@ -122,3 +122,6 @@ wfLoadSkin( 'Vector' );
 ## Using SendGrid to send emails.
 $wgSendGridAPIKey = getenv('SENDGRID_API_KEY');
 wfLoadExtension( 'SendGrid' );
+
+## Make exceptions more clear, for debugging.
+$wgShowExceptionDetails = true;
