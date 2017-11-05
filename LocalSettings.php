@@ -126,3 +126,4 @@ wfLoadExtension( 'SendGrid' );
 ## Make exceptions more clear, for debugging.
 $wgShowExceptionDetails = true;
 $wgShowSQLErrors = 1;
+$wgShowDBErrorBacktrace = true;
