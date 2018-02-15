@@ -1,6 +1,6 @@
 == MediaWiki ==
 
-This is the source code for wikiclaim.org, forked from MediaWiki
+This is the source code for https://wikiclaim.org, forked from MediaWiki
 (https://github.com/wikimedia/mediawiki). Includes extensions, and is ready for
 deployment to Heroku.
 
