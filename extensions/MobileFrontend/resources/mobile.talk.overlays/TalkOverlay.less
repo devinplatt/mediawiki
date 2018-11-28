@@ -1,0 +1,58 @@
+@import 'mobile.variables';
+
+.talk-overlay {
+	.error {
+		border: solid 1px @colorErrorText;
+	}
+
+	.comment {
+		margin: 40px 0 10px 0;
+
+		.wikitext-editor {
+			margin-top: 1em;
+			// Normally, wikitext editors don't have a border
+			border: 1px solid @grayLight;
+		}
+
+		// Restrict width of save button (otherwise 100%)
+		button.mw-ui-block {
+			max-width: 10em;
+		}
+	}
+
+	.overlay-content {
+		padding-bottom: 3.5em;
+	}
+
+	a {
+		cursor: pointer;
+	}
+
+	.panel.save-panel {
+		padding: 1em;
+	}
+
+	.panel {
+		padding: 0;
+
+		input,
+		textarea {
+			padding: 16px 1em;
+			margin: 0;
+			border-radius: 0;
+			border: 0;
+		}
+	}
+
+	.content-header {
+		.add {
+			margin-top: 1em;
+		}
+	}
+}
+
+@media all and ( min-width: @deviceWidthTablet ) {
+	.content.talk-section {
+		margin: 0 auto 0 0;
+	}
+}

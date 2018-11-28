@@ -1,0 +1,9 @@
+<div>
+	{{#warningOptions}}{{>messageBox}}{{/warningOptions}}
+	<div class="actions">
+		{{#anonButton}}{{>button}}{{/anonButton}}
+		{{#loginButton}}{{>button}}{{/loginButton}}
+		{{#signupButton}}{{>button}}{{/signupButton}}
+	</div>
+	<p>{{ctaMessage}}</p>
+</div>

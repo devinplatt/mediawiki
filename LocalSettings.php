@@ -154,3 +154,11 @@ $wgCaptchaQuestions = [
   'Give a 5-letter word for an assertion of the truth of something, typically one that is disputed or in doubt.' => 'claim',
   # 'How many fingers do 3 hands have?' => [ 15, 'fifteen' ], // A question may have many answers
 ];
+
+# Mobile Extension.
+wfLoadExtension( 'MobileFrontend' );
+$wgMFAutodetectMobileView = true;
+wfLoadSkin( 'MinervaNeue' );
+$wgMFDefaultSkinClass = 'SkinMinerva'; // Default on WMF wikis.
+#$wgMFDefaultSkinClass = 'SkinVector'; // use Vector skin
+$wgMinervaShowCategoriesButton = [ 'base' => true ];
