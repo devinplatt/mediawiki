@@ -125,5 +125,14 @@ wfLoadExtension( 'SendGrid' );
 
 ## Make exceptions more clear, for debugging.
 $wgShowExceptionDetails = true;
-$wgShowSQLErrors = 1;
-$wgShowDBErrorBacktrace = true;
+$wgShowSQLErrors = true;
+
+## Enable citaitons.
+wfLoadExtension( 'Cite' );
+
+## Enable ParserFunctions, which may be used by templates.
+wfLoadExtension( 'ParserFunctions' );
+
+## Enable Scribunto, which may be used by templates.
+require_once "$IP/extensions/Scribunto/Scribunto.php";
+$wgScribuntoDefaultEngine = 'luastandalone';
