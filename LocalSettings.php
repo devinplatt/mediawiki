@@ -142,3 +142,15 @@ $wgScribuntoDefaultEngine = 'luastandalone';
 # https://webmasters.stackexchange.com/questions/65376/how-to-get-rid-of-heroku-app-domain-in-the-search-resutls
 # https://www.mediawiki.org/wiki/Manual:$wgEnableCanonicalServerLink/en
 $wgEnableCanonicalServerLink = true;
+
+## Anti-spam measures.
+# If your MediaWiki version is 1.25 or higher, use this line:
+wfLoadExtension( 'ConfirmEdit' );
+wfLoadExtension( 'ConfirmEdit/QuestyCaptcha' );
+
+# Good news, answers are case-insensitive.
+# https://www.mediawiki.org/wiki/Extension:ConfirmEdit#QuestyCaptcha
+$wgCaptchaQuestions = [
+  'Give a 5-letter word for an assertion of the truth of something, typically one that is disputed or in doubt.' => 'claim',
+  # 'How many fingers do 3 hands have?' => [ 15, 'fifteen' ], // A question may have many answers
+];
