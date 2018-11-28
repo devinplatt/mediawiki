@@ -136,3 +136,9 @@ wfLoadExtension( 'ParserFunctions' );
 ## Enable Scribunto, which may be used by templates.
 require_once "$IP/extensions/Scribunto/Scribunto.php";
 $wgScribuntoDefaultEngine = 'luastandalone';
+
+## Make custom domain the canonical url, for SEO
+# See:
+# https://webmasters.stackexchange.com/questions/65376/how-to-get-rid-of-heroku-app-domain-in-the-search-resutls
+# https://www.mediawiki.org/wiki/Manual:$wgEnableCanonicalServerLink/en
+$wgEnableCanonicalServerLink = true;
