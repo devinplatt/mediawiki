@@ -162,3 +162,36 @@ wfLoadSkin( 'MinervaNeue' );
 $wgMFDefaultSkinClass = 'SkinMinerva'; // Default on WMF wikis.
 #$wgMFDefaultSkinClass = 'SkinVector'; // use Vector skin
 $wgMinervaShowCategoriesButton = [ 'base' => true ];
+
+# Visual Editor Extension
+# Please note that you need a parsoid server for this to work.
+# You can run a separate Heroku app for the parsoid server.
+wfLoadExtension( 'VisualEditor' );
+
+# Enable by default for everybody
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
+
+# Optional: Set VisualEditor as the default for anonymous users
+# otherwise they will have to switch to VE
+# $wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+# Allow anonymous users to edit pages.
+# $wgGroupPermissions['*']['edit'] = true;
+
+# Don't allow users to disable it
+$wgHiddenPrefs[] = 'visualeditor-enable';
+
+# OPTIONAL: Enable VisualEditor's experimental code features
+#$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
+
+# Parsoid configuration
+$wgVirtualRestConfig['modules']['parsoid'] = array(
+# URL to the Parsoid instance
+# Use port 8142 if you use the Debian package
+# url must not end in a slash, otherwise it might give a 404 error
+#'url' => 'https://wc-parsoid.herokuapp.com',
+'url' => getenv('PARSOID_URL'),
+# Parsoid "domain" (optional)
+#'domain' => 'localhost',
+# Parsoid "prefix" (optional)
+# 'prefix' => 'your wiki prefix',
+);
